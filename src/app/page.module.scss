@@ -1,0 +1,155 @@
+// Max's Homepage Styles
+// Clean, modern styling for the main page
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+
+  .title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--secondary);
+    font-weight: 300;
+  }
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-lg);
+}
+
+.welcome {
+  .greeting {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    color: var(--secondary);
+    max-width: 600px;
+    margin: 0 auto var(--space-lg);
+  }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 800px;
+  margin: var(--space-xl) 0;
+
+  .feature {
+    background: var(--muted);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .featureIcon {
+      font-size: 2rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    .featureTitle {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--space-xs);
+    }
+
+    .featureDescription {
+      color: var(--secondary);
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer {
+  text-align: center;
+  padding-top: var(--space-xl);
+  margin-top: var(--space-xl);
+  border-top: 1px solid var(--border);
+  color: var(--secondary);
+  font-size: 0.875rem;
+
+  .signature {
+    font-weight: 500;
+    color: var(--primary);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .container {
+    padding: var(--space-md);
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+
+    // Button components will handle their own responsive styling
+  }
+}
+
+// Animation keyframes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome,
+.features,
+.actions {
+  animation: fadeInUp 0.6s ease-out;
+}
