@@ -58,7 +58,7 @@ export default function HomePage() {
           <Button
             variant='primary'
             size='lg'
-            href='https://github.com'
+            href='https://github.com/maxweiner02/nextjs-typescript-template'
             target='_blank'
             rel='noopener noreferrer'
           >
