@@ -7,6 +7,7 @@ A modern, opinionated Next.js template featuring TypeScript, SCSS, and best prac
 - **Next.js 15** - Latest version with App Router
 - **TypeScript** - Full type safety with strict mode
 - **SCSS** - Modern styling with CSS custom properties
+- **Radix UI** - Unstyled, accessible component primitives
 - **PNPM** - Fast, efficient package management
 - **ESLint** - Code quality and consistency
 - **Responsive Design** - Mobile-first approach
@@ -18,6 +19,7 @@ A modern, opinionated Next.js template featuring TypeScript, SCSS, and best prac
 - [Next.js 15](https://nextjs.org/) - React framework
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [SCSS](https://sass-lang.com/) - Enhanced CSS
+- [Radix UI](https://www.radix-ui.com/) - Primitive components
 - [PNPM](https://pnpm.io/) - Package manager
 - [ESLint](https://eslint.org/) - Linting
 
@@ -55,9 +57,10 @@ src/
 │   ├── layout.tsx        # Root layout
 │   ├── page.tsx          # Homepage
 │   └── page.module.scss  # Homepage styles
-├── components/           # Reusable components (add as needed)
-├── styles/              # Additional stylesheets (add as needed)
-└── types/               # TypeScript type definitions (add as needed)
+├── components/           # Reusable components
+│   ├── index.ts          # Component exports
+│   ├── Button/
+└── types/               # TypeScript type definitions
 ```
 
 ## 🎨 Styling Architecture
@@ -69,6 +72,18 @@ This template uses a modern SCSS architecture with:
 - **Responsive Design** - Mobile-first breakpoints
 - **Dark Mode** - Automatic theme switching
 - **Design Tokens** - Consistent spacing, colors, and typography
+
+## 🧩 Radix UI Integration
+
+This template integrates [Radix UI](https://www.radix-ui.com/) primitives for building accessible, composable components:
+
+### Key Benefits
+
+- **Accessibility First** - WAI-ARIA compliant out of the box
+- **Keyboard Navigation** - Full keyboard support for all interactions
+- **Focus Management** - Proper focus handling and restoration
+- **Unstyled Primitives** - Complete design control with your styling
+- **Composable** - Use `asChild` prop for advanced composition patterns
 
 ## 📝 Scripts
 
@@ -105,13 +120,10 @@ Add new components in the `src/components/` directory with their corresponding S
 
 - **SOLID Principles** - All code follows SOLID design principles
 - **Type Safety** - Comprehensive TypeScript coverage
+- **Accessibility** - WCAG compliant with Radix UI primitives
 - **Performance** - Optimized for Core Web Vitals
-- **Accessibility** - WCAG compliant markup and styles
+- **Composability** - Components built for reusability and extension
 - **SEO** - Proper meta tags and semantic HTML
-
-## 🤝 Contributing
-
-Feel free to submit issues and enhancement requests!
 
 ## 📄 License
 
@@ -119,4 +131,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-**Made with ❤️ by Max**
+Made with ❤️ by Max
