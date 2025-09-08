@@ -1,6 +1,3 @@
-// Max's Homepage Styles
-// Clean, modern styling for the main page
-
 .container {
   min-height: 100vh;
   display: flex;
@@ -110,6 +107,19 @@
   color: var(--secondary);
   font-size: 0.875rem;
 
+  .footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+  }
+
   .signature {
     font-weight: 500;
     color: var(--primary);
@@ -130,8 +140,6 @@
   .actions {
     flex-direction: column;
     align-items: center;
-
-    // Button components will handle their own responsive styling
   }
 }
 

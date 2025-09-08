@@ -1,16 +1,14 @@
 import styles from './page.module.scss';
-import { Button } from '@/components';
+import { Button, ThemeToggle } from '@/components';
 
-/**
- * Max's Personal Homepage Component
- * A clean, modern landing page for the Next.js template
- */
 export default function HomePage() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>Max&apos;s Template</h1>
-        <p className={styles.subtitle}>Next.js + TypeScript + SCSS</p>
+        <p className={styles.subtitle}>
+          Next.js + TypeScript + SCSS + Radix UI
+        </p>
       </header>
 
       <main className={styles.main}>
@@ -19,9 +17,8 @@ export default function HomePage() {
             Welcome to my personal template! 👋
           </h2>
           <p className={styles.description}>
-            This is Max&apos;s carefully crafted Next.js template featuring
-            TypeScript, SCSS, and modern development best practices. Ready to
-            build something amazing!
+            Carefully crafted Next.js template featuring TypeScript, SCSS, and
+            Radix UI primitives
           </p>
         </section>
 
@@ -52,6 +49,15 @@ export default function HomePage() {
               design
             </p>
           </div>
+
+          <div className={styles.feature}>
+            <div className={styles.featureIcon}>🧩</div>
+            <h3 className={styles.featureTitle}>Radix UI Primitives</h3>
+            <p className={styles.featureDescription}>
+              Unstyled, accessible components built with Radix UI primitives for
+              maximum flexibility and composability
+            </p>
+          </div>
         </section>
 
         <section className={styles.actions}>
@@ -79,9 +85,12 @@ export default function HomePage() {
       </main>
 
       <footer className={styles.footer}>
-        <p>
-          Crafted with ❤️ by <span className={styles.signature}>Max</span>
-        </p>
+        <div className={styles.footerContent}>
+          <p>
+            Crafted with ❤️ by <span className={styles.signature}>Max</span>
+          </p>
+          <ThemeToggle />
+        </div>
       </footer>
     </div>
   );

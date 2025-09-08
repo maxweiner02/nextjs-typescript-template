@@ -1,0 +1,85 @@
+.themeToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 2.25rem;
+
+  &:hover {
+    background: var(--muted);
+    border-color: var(--primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.label {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+// Skeleton loader for hydration
+.skeleton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .button {
+    width: 6rem;
+    height: 2.25rem;
+    background: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .label {
+    display: none;
+  }
+
+  .button {
+    padding: var(--space-xs);
+    min-width: 2.25rem;
+  }
+}

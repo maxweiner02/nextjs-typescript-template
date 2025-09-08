@@ -33,14 +33,13 @@
   --radius-lg: 0.75rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #020617;
-    --foreground: #f8fafc;
-    --muted: #0f172a;
-    --border: #334155;
-    --secondary: #94a3b8;
-  }
+// Dark theme
+[data-theme='dark'] {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --muted: #0f172a;
+  --border: #334155;
+  --secondary: #94a3b8;
 }
 
 *,
